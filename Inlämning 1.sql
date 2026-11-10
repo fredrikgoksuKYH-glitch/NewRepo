@@ -85,8 +85,6 @@ SELECT
 FROM dbo.Kunder AS k
 LEFT JOIN dbo.Uppdrag AS u
 	ON k.KundId = u.KundId
-	AND CAST (GETDATE() AS DATE) BETWEEN CAST(u.Startdatum AS DATE) 
-	AND CAST(u.Slutdatum AS DATE)
 GROUP BY 
 	k.KundId,
 	k.Foretagsnamn
